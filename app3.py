@@ -14,7 +14,7 @@ import numpy as np
 
 @st.cache_data
 def carregar_dados():
-    df = pd.read_excel("chave.xlsx")
+    df = pd.read_csv("chave.csv")
     return df
 
 df = carregar_dados()
