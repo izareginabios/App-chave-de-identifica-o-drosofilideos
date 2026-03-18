@@ -12,11 +12,9 @@ import numpy as np
 def carregar_dados():
     df = pd.read_csv("chave.csv")
     return df
-
 df = carregar_dados()
 coluna_especie = df.columns[0]
 caracteristicas = df.columns[1:]
-
 st.title("Identificador de Espécies de Drosophila")
 st.write(
 """
@@ -26,7 +24,6 @@ características morfológicas.
 )
 st.divider()
 st.subheader("Selecione ou digite as características observadas")
-
 entrada_usuario = {}
 num_colunas = 3
 cols = st.columns(num_colunas)
@@ -59,7 +56,6 @@ def calcular_similaridade(linha, entrada):
     if total == 0:
         return 0
     return match / total
-
 st.divider()
 if st.button("Identificar Espécie"):
     resultados = []
