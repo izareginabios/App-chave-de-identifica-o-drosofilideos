@@ -28,16 +28,17 @@ Certifique-se de ter o Python instalado em sua máquina. É recomendado o uso de
    cd App-chave-de-identifica-o-drosofilideos
    ```
 
-2. **Crie um ambiente virtual (opcional, mas recomendado):**
+2. **Crie e ative um ambiente Conda:**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # No Windows: venv\Scripts\activate
+   conda create -n drosophila python=3.10
+   conda activate drosophila
    ```
 
 3. **Instale as dependências:**
    ```bash
-   pip install -r requeriments.txt
+   conda install --file requeriments.txt -c conda-forge
    ```
+   *Nota: Caso algum pacote não esteja disponível no conda-forge, você pode usar `pip install -r requeriments.txt` dentro do ambiente conda.*
 
 ## 💻 Como Usar
 
