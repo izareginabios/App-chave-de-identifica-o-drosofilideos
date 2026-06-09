@@ -1,6 +1,6 @@
 # Identificador de Espécies de Drosophila
 
-**Versão atual:** `v0.5.0-beta`
+**Versão atual:** `v0.5.1-beta`
 
 Este projeto é um sistema digital de identificação taxonômica para espécies de *Drosophila*, baseado em características morfológicas. A aplicação utiliza a biblioteca Streamlit para fornecer uma interface web intuitiva onde os usuários podem selecionar características observadas e obter a espécie mais provável.
 
@@ -40,7 +40,7 @@ Certifique-se de ter o Python instalado em sua máquina. É recomendado o uso de
    ```bash
    conda install --file requeriments.txt -c conda-forge
    ```
-   *Nota: Caso algum pacote não esteja disponível no conda-forge, você pode usar `pip install -r requeriments.txt` dentro do ambiente conda.*
+   *Nota: O arquivo `requeriments.txt` foi simplificado para garantir compatibilidade com Windows, macOS e Linux.*
 
 ## 💻 Como Usar
 

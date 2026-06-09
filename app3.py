@@ -6,7 +6,7 @@ import os
 st.set_page_config(layout="wide", page_title="Identificador de Drosophila")
 
 # Versão do Aplicativo
-VERSION = "v0.5.0-beta"
+VERSION = "v0.5.1-beta"
 
 @st.cache_data
 def carregar_dados():
