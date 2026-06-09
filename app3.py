@@ -5,6 +5,9 @@ import os
 
 st.set_page_config(layout="wide", page_title="Identificador de Drosophila")
 
+# Versão do Aplicativo
+VERSION = "v0.5.0-beta"
+
 @st.cache_data
 def carregar_dados():
     df = pd.read_csv("chave.csv")
@@ -14,6 +17,7 @@ df = carregar_dados()
 coluna_especie = df.columns[0]
 caracteristicas = df.columns[1:]
 
+st.sidebar.markdown(f"**Versão:** `{VERSION}`")
 st.title("🔬 Identificador de Espécies de Drosophila")
 st.write(
 """

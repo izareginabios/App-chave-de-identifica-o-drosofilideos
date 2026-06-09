@@ -1,5 +1,7 @@
 # Identificador de Espécies de Drosophila
 
+**Versão atual:** `v0.5.0-beta`
+
 Este projeto é um sistema digital de identificação taxonômica para espécies de *Drosophila*, baseado em características morfológicas. A aplicação utiliza a biblioteca Streamlit para fornecer uma interface web intuitiva onde os usuários podem selecionar características observadas e obter a espécie mais provável.
 
 ## 🚀 Funcionalidades
