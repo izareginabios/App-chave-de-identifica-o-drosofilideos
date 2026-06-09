@@ -2,11 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+st.set_page_config(layout="wide")
+
 @st.cache_data
 def carregar_dados():
     df = pd.read_csv("chave.csv")
     return df
-    
+
 df = carregar_dados()
 coluna_especie = df.columns[0]
 caracteristicas = df.columns[1:]
