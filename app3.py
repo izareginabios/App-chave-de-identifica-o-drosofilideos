@@ -18,6 +18,8 @@ coluna_especie = df.columns[0]
 caracteristicas = df.columns[1:]
 
 st.sidebar.markdown(f"**Versão:** `{VERSION}`")
+st.sidebar.markdown("---")
+st.sidebar.markdown("**Autora Principal:**\n\nIza Regina")
 st.title("🔬 Identificador de Espécies de Drosophila")
 st.write(
 """
@@ -35,23 +37,35 @@ cols = st.columns(num_colunas)
 
 for i, c in enumerate(caracteristicas):
     with cols[i % num_colunas]:
-        # Tenta carregar uma imagem de ajuda para a característica
-        img_ajuda = f"ajuda/{c.replace(' ', '_').lower()}.png"
-        if os.path.exists(img_ajuda):
-            st.image(img_ajuda, caption=f"Guia: {c}", width=150)
+        # Layout customizado: Nome da característica + Botão de ajuda
+        col_label, col_help = st.columns([0.85, 0.15])
+        
+        with col_label:
+            st.markdown(f"**{c}**")
             
+        with col_help:
+            img_ajuda = f"ajuda/{c.replace(' ', '_').lower()}.png"
+            if os.path.exists(img_ajuda):
+                with st.popover("*"):
+                    st.image(img_ajuda, caption=f"Guia: {c}")
+            else:
+                st.write("")
+
+        # Entrada de dados
         if c.lower() == "i. costal":
             valor = st.text_input(
-                c,
-                placeholder="Digite o valor observado",
-                key=c
+                "Valor", 
+                placeholder="Ex: 1.6",
+                key=c,
+                label_visibility="collapsed"
             )
         else:
             opcoes = df[c].dropna().unique()
             valor = st.selectbox(
-                c,
+                "Opção",
                 ["Desconhecido"] + list(opcoes),
-                key=c
+                key=c,
+                label_visibility="collapsed"
             )
         entrada_usuario[c] = valor
 

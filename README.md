@@ -63,4 +63,4 @@ Certifique-se de ter o Python instalado em sua máquina. É recomendado o uso de
 - `README.md`: Documentação do projeto.
 
 ---
-Desenvolvido por [izareginabios](https://github.com/izareginabios)
+Autora Principal: Iza Regina ([izareginabios](https://github.com/izareginabios))
