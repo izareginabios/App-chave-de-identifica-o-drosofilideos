@@ -1,4 +1,4 @@
-# Identificador de Espécies de Drosofílideos
+# Identificador de Espécies de drosofílideos
 
 **Versão atual:** `v0.5.1-beta`
 
